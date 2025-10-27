@@ -1,0 +1,11 @@
+{
+  "name": "code-x-frontend",
+  "version": "1.0.0",
+  "description": "Code X Productivity Hub frontend",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

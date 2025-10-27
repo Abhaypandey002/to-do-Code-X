@@ -1,0 +1,15 @@
+:root {
+  --background-color: #f7f9fc;
+  --surface-color: #ffffff;
+  --muted-surface-color: #eef2f9;
+  --accent-color: #2563eb;
+  --accent-muted-color: rgba(37, 99, 235, 0.12);
+  --text-color: #1f2937;
+  --border-color: #d1d5db;
+  --button-text-color: #ffffff;
+}
+
+body.light {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

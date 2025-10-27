@@ -1,0 +1,208 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button.primary {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+}
+
+button.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card {
+  background-color: var(--surface-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--muted-surface-color);
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(2rem, 1fr));
+  gap: 0.25rem;
+}
+
+.calendar-cell {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.calendar-cell.has-event {
+  border-color: var(--accent-color);
+}
+
+.calendar-cell.selected {
+  background-color: var(--accent-muted-color);
+}
+
+.event-list {
+  max-height: 160px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-item {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--muted-surface-color);
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.auth-container {
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
